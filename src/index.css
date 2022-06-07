@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgb(242, 205, 160);
+  background: radial-gradient(
+    circle,
+    rgba(242, 205, 160, 1) 14%,
+    rgba(242, 239, 220, 1) 46%,
+    rgba(85, 179, 217, 1) 85%
+  );
+  font-family: "Poiret One", cursive;
+  color: #353839;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+header {
+  display: flex;
+  width: 90vw;
+  justify-content: space-between;
+}
+input,
+textarea {
+  outline: none;
+  resize: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "quotes quotes quotes";
+  padding: 20px;
+  color: #353839;
+}
+
+.notes-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 0;
+  grid-area: main;
+}
+
+.search,
+.add-new {
+  font-size: 14px;
+  padding: 5px;
+  margin: 0 8px 0;
+  color: #353839;
+}
+
+.search {
+  width: 300px;
+  background-color: #f2f9fe;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  grid-area: search;
+  font-family: "Poiret One", cursive;
+}
+
+.add-new {
+  border-radius: 250px;
+  width: 120px;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  font-weight: bolder;
+  font-size: 20px;
+  background-color: #9e9ef9;
+  outline: none;
+  grid-area: newBtn;
+  font-family: "Poiret One", cursive;
+}
+
+.note {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background-image: linear-gradient(135deg, #ffa8a8 10%, #fcff00 100%);
+  box-shadow: 3px 3px 3px #36384e;
+  border-radius: 5px;
+  position: relative;
+  font-family: "Poiret One", cursive;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.note__title,
+.note__description {
+  width: 100%;
+  padding: 8px 14px;
+  background: transparent;
+  color: #1e2020;
+  font-family: "Poiret One", cursive;
+}
+
+.note__title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.note__description {
+  flex-grow: 1;
+  font-size: 14px;
+}
+
+.note__delete {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 20px;
+  color: #353839;
+  padding: 5px;
+}
+
+.note__delete:hover {
+  color: #613a43;
+  cursor: pointer;
+}
+
+.inspFont {
+  font-family: "Sacramento", cursive;
+  font-size: 38px;
+}
+
+.quoteFont {
+  font-size: 30px;
+}
+.quote-area {
+  margin: 10px 0 0 40px;
+  font-family: "Sacramento", cursive;
+  padding: 8px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  grid-area: quotes;
+  border: 1px solid black;
+}
+
+.inspireBtn {
+  height: 60px;
+  width: 120px;
+  border-radius: 40px;
+  border: solid 5px #f2f9fe;
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px 0 0 10px;
+}
